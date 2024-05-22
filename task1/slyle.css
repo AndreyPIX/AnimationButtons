@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.buttons{
+    display: grid;
+    grid-template-rows: repeat(7, 120px);
+    grid-template-columns: 200px;
+    align-items: center;
+    justify-items: center;
+}
+.button-style{
+    width: 150px;
+    height: 50px;
+    box-shadow: 0px 0px 0px 3px grey;
+    font-size: 16px;
+    
+}
+.button1{
+    border-radius: 100px;
+    background-color: rgb(92, 92, 219);
+    box-shadow: 0px 0px 0px 3px rgb(138, 138, 252);
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.3s;
+}
+.button1:hover{
+    box-shadow: 0px 0px 0px 5px rgb(138, 138, 252);
+}
+.button2{
+    border-radius: 100px;
+    background-color: rgb(67, 153, 67);
+    box-shadow: 0px 0px 0px 3px rgb(139, 235, 139);
+    color: rgb(139, 235, 139);
+    font-weight: bold;
+    transition: all 0.3s;
+}
+.button2:hover{
+    background-color: white;
+    box-shadow: 0px 0px 0px 3px rgb(67, 153, 67);
+    color: rgb(67, 153, 67);
+}
+.button3{
+    width: 155px;
+    background-color: white;
+    font-weight: bold;
+    box-shadow: 0px 0px 0px 3px rgb(216, 216, 216);
+    transition: all 0.3s;
+}
+.button3:hover{
+    background-color: black;
+    color: white;
+    border-radius: 18px;
+    box-shadow: 0px 0px 0px 3px black;
+}
+.button__wrapper{
+    display: block;
+    overflow: hidden;
+    width: 145px;
+}
+.button4{
+    position: relative;
+    margin-left: 0;
+    box-shadow: none;
+    background-color: rgb(0, 153, 255);
+    transform: translateX(0);
+    color: white;
+    transition: all 0.5s;
+}
+.button4::before{
+    content: attr(data-text);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    background-color: rgb(158, 216, 255);
+    transform: translateX(0);
+    right: -145px;
+    top: 0;
+    color: rgb(0, 153, 255);
+    transition: all 0.5s;
+}
+.button__wrapper:hover .button4::before,
+.button__wrapper:focus .button4::before{
+    transform: translateX(-145px);
+    color: rgb(0, 153, 255);
+}
+
+.button5{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    text-transform: uppercase;
+    width: 130px;
+    height: 65px;
+    margin-left: 25px;
+    background-color: white;
+    color: blueviolet;
+    box-shadow: none;
+    border: 3px solid blueviolet;
+    border-right: 0px;
+    border-left: 0px;
+    transform-origin: center;
+    z-index: 1;
+    
+}
+p {
+    z-index: 3;
+}
+.button5::before{
+    content: "";
+    z-index: 2;
+    position: absolute;
+    background-color: brown;
+    opacity: 0.25;
+    padding: 20px;
+    top:15px;
+    left:15px;
+}
+.button6{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 170px;
+    background-color: white;
+    margin-left: 25px;
+}
+.button6::before{
+    content: "";
+}
+.button7{
+    margin-left: 25px;
+    background-color: white;
+    font-weight:bold;
+}
