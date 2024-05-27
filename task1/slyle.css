@@ -106,36 +106,125 @@
     border: 3px solid blueviolet;
     border-right: 0px;
     border-left: 0px;
-    transform-origin: center;
+    transition: all 0.3s;
     z-index: 1;
-    
 }
-p {
-    z-index: 3;
-}
-.button5::before{
+.button5::after{
     content: "";
-    z-index: 2;
+    width: 130px;
+    height: 65px;
     position: absolute;
+    display: block;
+    bottom: 0px;
     background-color: brown;
-    opacity: 0.25;
-    padding: 20px;
-    top:15px;
-    left:15px;
+    transform: scaleY(0);
+    opacity: 0.3;
+    transition: transform 0.3s
+}
+.button5:hover::after,
+.button5:focus::after{
+    transform: scaleY(1);
 }
 .button6{
+    width: 170px;
+    border-radius: 10px;
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
-    width: 170px;
     background-color: white;
     margin-left: 25px;
+    transition: all 0.5s;
 }
-.button6::before{
-    content: "";
+.button6 .text{
+    margin-left: 25px;
+    width: 100px;
 }
+.button6:hover .text{
+    margin-left: 10px;
+}
+.button6 .text::after{
+    content: '\21A3';
+    position: relative;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    margin-left: 10px;
+}
+button:hover .text::after{
+    content: '\21A3';
+    position: relative;
+    opacity: 1;
+    top: 0;
+    right: 0px;
+}
+/*
 .button7{
     margin-left: 25px;
+    position: relative;
     background-color: white;
     font-weight:bold;
+    box-shadow: none;
+    border-bottom: 5px solid rgb(209, 209, 5);
+    transition: background-color 0.5s;
+    z-index: -1;
+}
+.button7::after{
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 150px;
+    background-color: rgb(209, 209, 5);
+    transform-origin: bottom;
+    transform: scaleY(0);
+    bottom: 0; 
+    left: 0;
+    z-index: -10;
+    transition: all 0.5s;
+}
+.button7:hover::after,
+.button7:focus::after{
+    background-color: yellow;
+    transform: scaleY(1);
+}*/
+.text1{
+    z-index: 10;
+}
+.button7{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    text-transform: uppercase;
+    z-index: -1;
+    width: 150px;
+    height: 50px;
+    margin-left: 25px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    box-shadow: none;
+    border-bottom: 3px solid rgb(209, 209, 5);
+    border-right: 0px;
+    border-left: 0px;
+    transition: all 0.3s;
+    z-index: 1;
+}
+.button7::after{
+    content: "";
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    display: block;
+    transform-origin: bottom;
+    bottom: 0px;
+    background-color: rgb(209, 209, 5);
+    transform: scaleY(0);
+    transition: transform 0.3s;
+    z-index: -10;
+}
+.button7:hover .text1,
+.button7:focus .text1{
+    color: white;
+}
+.button7:hover::after,
+.button7:focus::after{
+    transform: scaleY(1);
 }
