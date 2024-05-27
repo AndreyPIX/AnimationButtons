@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.buttons{
+    margin: 100px;
+    display: grid; 
+    grid-template-columns: repeat(3, 100px); 
+    grid-template-rows: repeat(3, 100px);
+    max-width: 250px;
+}
+.button1 svg,
+.button2 svg,
+.button3 svg,
+.button4 svg,
+.button5 svg,
+.button6 svg{
+    scale: 1;
+}
+.button7 svg,
+.button8 svg,
+.button9 svg {
+    color: green;
+    scale: 0.6;  
+}
+.button1, .button2, .button3,
+.button4, .button5, .button6,
+.button7, .button8, .button9 {
+    scale: 1;
+    width: 70px;
+    height: 70px;
+    transition: 0.3s ease-in-out; 
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.button1, .button2, .button3{
+    border: 10px rgb(216, 209, 209) solid; 
+    border-radius: 50%; 
+    background-color: rgb(216, 209, 209); 
+    color: black;
+}
+.button4, .button5, .button6{
+    border: 10px whitesmoke solid; 
+    border-radius: 50%;
+    background-color: whitesmoke; 
+    color: black;  
+}
+.button7, .button8, .button9{
+    border: 3px green solid; 
+    border-radius: 50%; 
+    background-color: white; 
+    color: black; 
+}
+.button1{
+    grid-row: 1; 
+    grid-column: 1;  
+}
+.button2{
+    grid-row: 1; 
+    grid-column: 2;  
+}
+.button3{
+    grid-row: 1; 
+    grid-column: 3;  
+}
+.button4{
+    grid-row: 2; 
+    grid-column: 1;  
+}
+.button5{
+    grid-row: 2; 
+    grid-column: 2;  
+}
+.button6{
+    grid-row: 2; 
+    grid-column: 3;  
+}
+.button7{
+    grid-row: 3; 
+    grid-column: 1;  
+}
+.button8{
+    grid-row: 3; 
+    grid-column: 2;  
+}
+.button9{
+    grid-row: 3; 
+    grid-column: 3;  
+}
+
+.button1:focus, .button2:focus, .button3:focus{
+    outline: 3px solid rgb(30, 44, 172);
+    outline-offset: 0;
+    color: rgb(30, 44, 172);
+}
+.button4:focus, .button5:focus, .button6:focus{
+    outline: 3px solid rgb(8, 14, 73);
+    outline-offset: -6px;
+    color: rgb(8, 14, 73);
+}
+.button7:focus, .button8:focus, .button9:focus{
+    outline: 5px solid rgb(167, 245, 167);
+    outline-offset: 5px;
+    border-radius: 50%;
+    rotate: 15deg;
+    color: rgb(167, 245, 167);
+}
+
+.button1 svg:focus,
+.button2 svg:focus,
+.button3 svg:focus,
+.button4 svg:focus,
+.button5 svg:focus,
+.button6 svg:focus{
+    scale: 1;
+}
+.button7 svg:focus,
+.button8 svg:focus,
+.button9 svg:focus{
+    color: rgba(167, 245, 167, 0.5);    
+}
+
+.button1:hover, .button2:hover, .button3:hover{
+    border: 10px rgba(255, 0, 0) solid; 
+    scale: 1.1;
+    background-color: rgba(255, 0, 0);
+}
+.button4:hover, .button5:hover, .button6:hover{
+    outline: 3px solid rgb(100, 0, 0);
+    outline-offset: -6px;
+    color: rgb(30, 44, 172);
+}
+.button7:hover, .button8:hover, .button9:hover{
+    outline: 5px solid rgb(167, 245, 167);
+    outline-offset: 5px;
+    border-radius: 50%;
+    rotate: 15deg;
+    color: rgb(167, 245, 167);
+}
+.button4 svg:hover,
+.button5 svg:hover,
+.button6 svg:hover{
+    scale: 1;
+}
+.button7 svg:hover,
+.button8 svg:hover,
+.button9 svg:hover{
+    color: rgba(167, 245, 167, 0.5);    
+}

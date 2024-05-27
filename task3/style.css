@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.slider{
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(2, 300px);
+    gap: 30px;
+    margin: 0;
+    transition: 0.4s;
+}
+.slide1{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin: 0;
+    object-fit: cover;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.slide2-1,
+.slide2-2,
+.slide2-3{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin: 0;
+    flex-shrink: 0;
+    background-color: blue;
+}
+.slide2-1::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: red;
+    transform: scale(0.3) rotate(45deg);
+    transition: transform 0.4s; 
+}
+
+.slide2-2::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: yellow;
+    transform: scale(0.3) rotate(45deg);
+    transition: transform 0.4s; 
+}
+
+.slide2-3::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: green;
+    transform: scale(0.3) rotate(45deg);
+    transition: transform 0.4s; 
+}
+.slide__img1{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.slide__text1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(128, 128, 128, 0.5);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s;
+    align-items: start;
+}
+.slide__img2 {
+    top: 20%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    object-fit: cover;
+    rotate: 15deg;
+    transition: 0.4s;
+}
+.slide1:hover .slide__img1,
+.slide1:hover .slide__text1{
+    transition: transform 0.4s;
+    transform: scale(1.2);
+    overflow: hidden;
+    background-color: rgba(228, 228, 228, 0.5);
+}
+.btn1{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 6px 12px;
+    background: orange;
+    border-radius: 10px;
+    transition: all 0.3s;
+    bottom: 10px;
+    left: 35%;
+    position: absolute;
+}
+.btn2-1{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 6px 12px;
+    background: red;
+    border-radius: 10px;
+    transition: all 0.3s;
+    bottom: 10px;
+    left: 35%;
+    position: absolute;
+}
+.btn2-2{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 6px 12px;
+    background: yellow;
+    border-radius: 10px;
+    transition: all 0.3s;
+    bottom: 10px;
+    left: 35%;
+    position: absolute;
+}
+.btn2-3{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 6px 12px;
+    background: green;
+    border-radius: 10px;
+    transition: all 0.3s;
+    bottom: 10px;
+    left: 35%;
+    position: absolute;
+}
+
+.btn1:hover{
+    background: rgb(255, 174, 0);
+    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.479);
+    outline: 3px solid rgba(0, 0, 0, 0.205); 
+}
+.btn2-1:hover,
+.btn2-2:hover,
+.btn2-3:hover{
+    background: blue;
+    color: white;
+}
+.slide2:hover{
+    transform: scale(1.2);
+}
+
+.slide2:hover::before,
+.slide2:focus::before{
+    transform: scale(1) rotate(0);
+}
+.slide2:hover .slide-ing-2{
+    rotate: 0deg;
+}
