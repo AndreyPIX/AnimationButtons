@@ -157,35 +157,6 @@ button:hover .text::after{
     top: 0;
     right: 0px;
 }
-/*
-.button7{
-    margin-left: 25px;
-    position: relative;
-    background-color: white;
-    font-weight:bold;
-    box-shadow: none;
-    border-bottom: 5px solid rgb(209, 209, 5);
-    transition: background-color 0.5s;
-    z-index: -1;
-}
-.button7::after{
-    content: "";
-    position: absolute;
-    height: 50px;
-    width: 150px;
-    background-color: rgb(209, 209, 5);
-    transform-origin: bottom;
-    transform: scaleY(0);
-    bottom: 0; 
-    left: 0;
-    z-index: -10;
-    transition: all 0.5s;
-}
-.button7:hover::after,
-.button7:focus::after{
-    background-color: yellow;
-    transform: scaleY(1);
-}*/
 .text1{
     z-index: 10;
 }
